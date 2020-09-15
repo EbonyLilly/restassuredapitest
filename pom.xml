@@ -1,12 +1,12 @@
 <project>
 	<modelVersion>4.0.0</modelVersion>
-   <!-- Project Informantion-->
+   <!-- Project Information-->
    <groupId>alphaleaf</groupId>
    <artifactId>restassureapi</artifactId>
    <version>1.0.0</version>
 
 
-   <!-- Project Depency-->
+   <!-- Project Dependency-->
    <dependencies>
    	<dependency>
    		<groupId>io.rest-assured</groupId>
