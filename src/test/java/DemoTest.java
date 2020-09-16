@@ -1,4 +1,5 @@
 import io.restassured.RestAssured;
+import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
@@ -27,6 +28,13 @@ public class DemoTest {
                 .andReturn();
        response.getBody().prettyPrint();
 
+    }
+    @Test
+    public void practiceTest3() {
+        RestAssured.baseURI = "https://reqres.in/";
+        RequestSpecification spec = RestAssured.given();
+        Response response = spec.request(Method.GET, "/api/users/2");
+        String headers = response.headers().toString();
     }
 
 }
