@@ -45,10 +45,13 @@ This project depends on the following external libraries
 * Download and install Git v2.0+
 
 ## Set-up Instructions 
+You need to have following test execution set up
+![screenshot](/images/test_execution_setup.png)
 
 ## How to write Test Cases
 
 ## How to run Tests
+All the test triggering is done through maven commands, this framework supports multiple different types of test executions such as smoke, regression and end-to-end on different possible environment such as QA,Staging and UAT.
 #### Executing specific test 
 If you would like to execute a specific test that are on testng.xml file
 ```shell script
