@@ -89,6 +89,6 @@ public class RegresGetTest {
 
         sAssert.assertAll();
 
-
     }
+
 }
