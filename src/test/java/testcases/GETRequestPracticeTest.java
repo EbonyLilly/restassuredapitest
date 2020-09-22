@@ -1,6 +1,7 @@
 package testcases;
 
 import com.jayway.jsonpath.JsonPath;
+import commons.ApiConfig;
 import groovy.json.JsonOutput;
 import io.restassured.RestAssured;
 import io.restassured.http.Headers;
@@ -9,7 +10,7 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 import utility.Steps;
 
-public class GETRequestPracticeTest {
+public class GETRequestPracticeTest extends ApiConfig {
     @Test
     public void get_request_practice1() {
         // 1. Register a base URi where the request will be sent

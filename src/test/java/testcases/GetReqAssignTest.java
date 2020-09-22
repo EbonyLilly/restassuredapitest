@@ -1,6 +1,7 @@
 package testcases;
 
 import com.jayway.jsonpath.JsonPath;
+import commons.ApiConfig;
 import io.restassured.RestAssured;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
@@ -9,7 +10,7 @@ import org.testng.annotations.Test;
 
 import javax.print.attribute.standard.RequestingUserName;
 
-public class GetReqAssignTest {
+public class GetReqAssignTest extends ApiConfig {
     //Reqres Get TestCases
     @Test
     public void get_request_Reqres_Single_User() {

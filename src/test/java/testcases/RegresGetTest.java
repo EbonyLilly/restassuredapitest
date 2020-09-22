@@ -1,5 +1,6 @@
 package testcases;
 
+import commons.ApiConfig;
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
@@ -11,7 +12,7 @@ import org.testng.asserts.SoftAssert;
 
 import java.sql.SQLOutput;
 
-public class RegresGetTest {
+public class RegresGetTest extends ApiConfig {
     @Test
     public void client_can_get_all_user_status_line() {
         // Test Data

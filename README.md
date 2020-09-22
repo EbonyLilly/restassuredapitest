@@ -22,8 +22,9 @@ This project depends on the following external libraries
 ```
 ### Framework Architectural Diagram
 ```
+|-reports                        # all the generate test execution reports are here
 |-pom.xml                        # project object model file for the maven software
-|
+|-testng.xml                     # TestNG configuration files for the test structures and groupings
 |-src
     |---test
           |----java              # allthe java source files needs to stored in this folder

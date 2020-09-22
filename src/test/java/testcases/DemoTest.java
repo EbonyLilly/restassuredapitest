@@ -1,3 +1,6 @@
+package testcases;
+
+import commons.ApiConfig;
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
@@ -7,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.net.URI;
 
-public class DemoTest {
+public class DemoTest extends ApiConfig {
     @Test
     public void practiceTest(){
         String url = "https://reqres.in/api/users/2";
