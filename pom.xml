@@ -45,6 +45,15 @@
 					<suiteXmlFiles>
 						<xmlFile>testng.xml</xmlFile>
 					</suiteXmlFiles>
+
+					<properties>
+						<property>
+							<name>testnames</name>
+							<value>${testoff}</value>
+						</property>
+
+					</properties>
+
 				</configuration>
 			</plugin>
 

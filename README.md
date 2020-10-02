@@ -55,6 +55,9 @@ You need to have following test execution set up
 All the test triggering is done through maven commands, this framework supports multiple different types of test executions such as smoke, regression and end-to-end on different possible environment such as QA,Staging and UAT.
 #### Executing specific test 
 If you would like to execute a specific test that are on testng.xml file
+Choose from the following command:
+
+For invoking smoke test"
 ```shell script
 mvn test -Dtestof="smoke-api"
 ```

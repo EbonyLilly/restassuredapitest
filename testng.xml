@@ -6,11 +6,27 @@
    <listeners>
        <listener class-name="utility.TestExecutionsListener"/>
    </listeners>
-
-  <!-- Test context-->
-    <test name="Smoke">
+    <!-- Test context-->
+   <test name="EndpointVerification">
+            <classes>
+                <class name="tests.EndpointVerificationTest"/>
+            </classes>
+        </test>
+    <test name="SmokeTest">
         <classes>
-            <class name = "testcases.GETRequestPracticeTest"/>
+            <class name = "tests.EndpointVerificationTest"/>
+            <class name="tests.ApiSmokeTest"/>
+        </classes>
+    </test>
+    <test name="RegressionTest">
+        <classes>
+            <class name="tests.EndpointVerificationTest"/>
+            <class name="tests.ApiRegressionTest"/>
+        </classes>
+    </test>
+    <test name="E2E">
+        <classes>
+            <class name="tests.ApiEndToEndTest"/>
         </classes>
     </test>
 </suite>
