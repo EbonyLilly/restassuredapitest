@@ -2,6 +2,7 @@ package testcases;
 
 import commons.ApiConfig;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
@@ -58,24 +59,26 @@ public class PublicContactListTest extends ApiConfig{
         System.out.println(sessionToken);
 
     }
-    public String read(String filePath) {
-        String finalText = null;
-        try {
-            FileReader fr = new FileReader(filePath);
-            BufferedReader br = new BufferedReader(fr);
-            StringBuilder sb = new StringBuilder();
-            String line = br.readLine();
-            while (line != null) {
-                sb.append(line);
-                sb.append(System.lineSeparator());
-                line = br.readLine();
-            }
-            finalText = sb.toString();
-            br.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return finalText;
+    @Test
+    public void logout_single_user(){
+        // login a user
+        String path = System.getProperty("user.dir") + "/src/test/resources/payloads/newUser.json";
+        String payload = read(path).trim();
+
+        RestAssured.baseURI = base_uri;
+        Response responseWeGot = RestAssured.given()
+                .contentType("Application/json")
+                .body(payload)
+                .post("pcl/auth/login");
+        String sessionToken = responseWeGot.getBody().asString();
+
+        // login out a single login in user
+        RestAssured.given()
+                .header("Authorization", sessionToken)
+                .get("/pcl/auth/logout");
+
+        System.out.println("Response status line:  " + responseWeGot.getStatusLine());
+
     }
 
 }

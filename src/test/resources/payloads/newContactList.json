@@ -1,0 +1,13 @@
+{
+    "firstName": "Amy",
+    "lastName": "Lilly",
+    "email": "asmith@thinkingtester.com",
+    "location": {
+        "city": "Boston, MA",
+        "country": "USA"
+    },
+    "employer": {
+    	"jobTitle": "Software Tester",
+    	"company": "Microsoft"
+    }
+}
